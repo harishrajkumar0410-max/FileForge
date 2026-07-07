@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Image to PDF | FileForge</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="background">
+
+    <div class="blob blob1"></div>
+
+    <div class="blob blob2"></div>
+
+    <div class="blob blob3"></div>
+
+</div>
+
+<nav>
+
+<div class="logo">
+
+FileForge
+
+</div>
+
+<ul>
+
+<li><a href="/">Home</a></li>
+
+<li><a href="/pdf">PDF</a></li>
+
+<li><a href="/image">Image</a></li>
+
+<li><a href="/video">Video</a></li>
+
+<li><a href="/audio">Audio</a></li>
+
+<li><a href="/ai">AI</a></li>
+
+</ul>
+
+<div>
+
+<button class="login-btn">
+
+Login
+
+</button>
+
+<a href="/premium">
+
+<button class="premium-btn">
+
+Premium
+
+</button>
+
+</a>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<h1>
+
+Image → PDF
+
+</h1>
+
+<p>
+
+Convert multiple images into one PDF.
+
+</p>
+
+</section>
+
+<section class="upload-section">
+
+<form action="/convert-image-to-pdf"
+      method="POST"
+      enctype="multipart/form-data">
+
+<label class="upload-box" id="dropArea">
+
+<input
+type="file"
+id="imageInput"
+name="images"
+multiple
+accept="image/*"
+hidden>
+
+<div>
+
+<h2>
+
+📂 Drag & Drop Images
+
+</h2>
+
+<p>
+
+or Click Here
+
+</p>
+
+</div>
+
+</label>
+
+<p id="imageCount">0 Images Selected</p>
+
+<div id="previewContainer"></div>
+
+<div id="premiumPopup" class="popup">
+
+    <div class="popup-content">
+
+        <h2>Upgrade to Premium 🚀</h2>
+
+        <p>
+            Free users can convert up to <b>25 images</b> at a time.
+        </p>
+
+        <button id="closePopup" class="login-btn">
+            Continue with 25 Images
+        </button>
+
+        <a href="/premium">
+            <button class="premium-btn">
+                Upgrade Now
+            </button>
+        </a>
+
+    </div>
+
+</div>
+
+<button
+id="convertBtn"
+class="premium-btn"
+type="submit">
+
+Convert To PDF
+
+</button>
+
+</form>
+
+</section>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"></script>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Merge PDF | FileForge</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="background">
+
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+
+</div>
+
+<nav>
+
+    <div class="logo">
+        FileForge
+    </div>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+        <li><a href="/pdf">PDF</a></li>
+        <li><a href="/image">Image</a></li>
+        <li><a href="/video">Video</a></li>
+        <li><a href="/audio">Audio</a></li>
+        <li><a href="/ai">AI</a></li>
+
+    </ul>
+
+    <div>
+
+        <button class="login-btn">Login</button>
+
+        <a href="/premium">
+            <button class="premium-btn">Premium</button>
+        </a>
+
+    </div>
+
+</nav>
+
+<section class="hero">
+
+    <h1>Merge PDF</h1>
+
+    <p>Combine multiple PDF files into one document.</p>
+
+</section>
+
+<section class="upload-section">
+
+<form action="/merge-pdf"
+      method="POST"
+      enctype="multipart/form-data">
+
+<label class="upload-box" id="dropArea">
+
+<input
+type="file"
+id="pdfInput"
+name="pdfs"
+multiple
+accept=".pdf"
+hidden>
+
+<h2>📄 Drag & Drop PDF Files</h2>
+
+<p>or Click Here</p>
+
+</label>
+
+<p id="pdfCount">
+0 PDF Selected
+</p>
+
+<div id="previewContainer"></div>
+
+<div class="action-btn">
+    <button class="premium-btn" type="submit">
+        Merge PDFs
+    </button>
+</div>
+
+</form>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"></script>
+<script src="{{ url_for('static', filename='js/merge.js') }}"></script>
+
+</body>
+
+</html>

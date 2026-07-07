@@ -1,0 +1,7 @@
+Flask
+Pillow
+img2pdf
+pypdf
+pdf2docx
+PyMuPDF(fitz)
+gunicorn

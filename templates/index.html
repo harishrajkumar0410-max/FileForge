@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileForge - Convert Anything</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<!-- Background -->
+<div class="background">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+</div>
+
+<!-- Navbar -->
+<nav>
+
+    <div class="logo">
+        FileForge
+    </div>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+        <li><a href="/pdf">PDF</a></li>
+        <li><a href="/image">Image</a></li>
+        <li><a href="/video">Video</a></li>
+        <li><a href="/audio">Audio</a></li>
+        <li><a href="/ai">AI</a></li>
+
+    </ul>
+
+    <div>
+
+        <button class="login-btn">Login</button>
+
+        <a href="/premium">
+            <button class="premium-btn">Premium</button>
+        </a>
+
+    </div>
+
+</nav>
+
+<!-- Hero -->
+
+<section class="hero">
+
+    <h1>Convert Anything</h1>
+
+    <p>
+
+        PDF • Images • Videos • Audio • AI
+
+    </p>
+
+    <div class="search-box">
+
+        <input
+        type="text"
+        placeholder="Search any tool...">
+
+        <button>
+
+            Search
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- Categories -->
+
+<section class="tools">
+
+    <a href="/pdf" class="tool-card">
+
+        <h2>📄 PDF Tools</h2>
+
+        <p>Merge, Split, Compress and Convert PDFs.</p>
+
+    </a>
+
+    <a href="/image" class="tool-card">
+
+        <h2>🖼 Image Tools</h2>
+
+        <p>Resize, Compress and Convert Images.</p>
+
+    </a>
+
+    <a href="/video" class="tool-card">
+
+        <h2>🎬 Video Tools</h2>
+
+        <p>Convert and Compress Videos.</p>
+
+    </a>
+
+    <a href="/audio" class="tool-card">
+
+        <h2>🎵 Audio Tools</h2>
+
+        <p>Convert and Edit Audio Files.</p>
+
+    </a>
+
+    <a href="/ai" class="tool-card">
+
+        <h2>🤖 AI Tools</h2>
+
+        <p>OCR, AI Utilities and More.</p>
+
+    </a>
+
+</section>
+
+<footer>
+
+    © 2026 FileForge
+
+</footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PDF Tools | FileForge</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="background">
+
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+
+</div>
+
+<nav>
+
+    <div class="logo">
+        FileForge
+    </div>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+        <li><a href="/pdf">PDF</a></li>
+        <li><a href="/image">Image</a></li>
+        <li><a href="/video">Video</a></li>
+        <li><a href="/audio">Audio</a></li>
+        <li><a href="/ai">AI</a></li>
+
+    </ul>
+
+    <div>
+
+        <button class="login-btn">Login</button>
+
+        <a href="/premium">
+
+            <button class="premium-btn">
+                Premium
+            </button>
+
+        </a>
+
+    </div>
+
+</nav>
+
+<section class="hero">
+
+    <h1>PDF Tools</h1>
+
+    <p>
+
+        Everything you need to edit and convert PDF files.
+
+    </p>
+
+</section>
+
+<section class="tools">
+
+    <a href="/image-to-pdf" class="tool-card">
+
+        <h2>Image → PDF</h2>
+
+        <p>Convert multiple images into one PDF.</p>
+
+    </a>
+
+    <a href="/merge-pdf-page" class="tool-card">
+
+        <h2>Merge PDF</h2>
+
+        <p>Combine multiple PDF files into one.</p>
+
+    </a>
+
+    <a href="/split-pdf-page" class="tool-card">
+
+        <h2>Split PDF</h2>
+
+        <p>Split PDF pages into separate files.</p>
+
+    </a>
+
+    <a href="compress-pdf-page" class="tool-card">
+
+        <h2>Compress PDF</h2>
+
+        <p>Reduce PDF file size quickly.</p>
+
+    </a>
+
+    <a href="pdf-to-word-page" class="tool-card">
+
+        <h2>PDF → Word</h2>
+
+        <p>Convert PDF documents into Word.</p>
+
+    </a>
+
+    <a href="/word-to-pdf-page" class="tool-card">
+
+        <h2>Word → PDF</h2>
+
+        <p>Convert Word documents into PDF.</p>
+
+    </a>
+
+</section>
+
+<footer>
+
+    © 2026 FileForge
+
+</footer>
+
+</body>
+
+</html>
